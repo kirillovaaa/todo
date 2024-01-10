@@ -1,0 +1,89 @@
+.popup {
+  display: flex;
+  background: rgba(42, 42, 42, 0.8);
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+  padding-left: 19px;
+  padding-right: 19px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__window {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 50px 30px;
+  border-radius: 50px;
+  max-width: 500px;
+  width: 100%;
+  align-items: left;
+  position: relative;
+}
+
+.popup__heading {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.popup__close-button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.popup__close-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.popup__close-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.popup__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.popup__input-title {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.popup__input {
+  border-radius: 4px;
+  border: 0.1px solid #000;
+  resize: none;
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+.popup__save-button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+}
+.popup__save-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
