@@ -18,7 +18,7 @@
 .todo__item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   background: #fff;
   border-radius: 50px;
   width: 100%;
@@ -31,6 +31,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .todo__item-heading {
@@ -69,6 +70,7 @@
   font-size: 20px;
   font-weight: 600;
   color: #7c8590;
+  margin-top: auto;
 }
 
 .todo__button:hover {
