@@ -1,33 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Popup.css";
 import closeIcon from "../../images/close-icon.svg";
 
-const Popup = ({ isOpen, onClose, onSubmit }) => {
-  const [name, setName] = useState("");
-
-  const handleChange = (event) => {
-    setName(event.target.value);
-    console.log(event.target.value);
-  };
-
+const Popup = ({ isOpen, children, onClose, onSubmit }) => {
   return (
-    <form className={`popup ${isOpen && "popup_opened"}`} onSubmit={onSubmit}>
+    <div className={`popup ${isOpen && "popup_opened"}`}>
       <div className="popup__window">
-        <h2 className="popup__heading">Edit Option</h2>
-        <div className="popup__input-container">
-          <h3 className="popup__input-title">Label Text</h3>
-          <input
-            className="popup__input"
-            type="text"
-            name="name"
-            value={name}
-            placeholder=""
-            minLength="2"
-            maxLength="30"
-            required={true}
-            onChange={handleChange}
-          />
-        </div>
+        <h2 className="popup__heading">Edit</h2>
+
+        {children}
+
         <button
           className="popup__close-button"
           type="button"
@@ -36,12 +18,8 @@ const Popup = ({ isOpen, onClose, onSubmit }) => {
         >
           <img className="popup__close-icon" src={closeIcon} alt="Закрыть" />
         </button>
-
-        <button className="popup__save-button" type="submit">
-          Save
-        </button>
       </div>
-    </form>
+    </div>
   );
 };
 

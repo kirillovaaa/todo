@@ -27,9 +27,13 @@ function List({
 
       <div>
         {cards.map((card) => (
-          <Card key={card.id} onClick={() => onClickEditCard(id, card.id)}>
-            {card.text}
-          </Card>
+          <Card
+            key={card.id}
+            onClickEditCard={() =>
+              onClickEditCard({ listId: id, cardId: card.id, text: card.text })
+            }
+            text={card.text}
+          />
         ))}
       </div>
 
